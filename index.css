@@ -1,0 +1,150 @@
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        margin: 0rem;
+        overflow: hidden;
+      }
+      .contact-me {
+        background-color: rgb(72, 72, 72) ;
+        color: white;
+        border: white;
+        height: 5vmin;
+        width: 13vmin;
+        border-radius: 13vmin;
+        cursor: pointer;
+        position: absolute;
+        top: 85%;
+        left: 45%;
+      }
+      .contact-me:hover {
+        background-color: silver;
+        color: black;
+        
+      }
+      #image-track > .container1 {
+        width: 55vmin;
+        height: 55vmin;
+        object-fit: cover;
+        object-position: 100% 50%;
+      }
+      .purple, .blue, .orange {
+        position: absolute;
+        border-style: solid;
+        color: transparent;
+        border-color: transparent;
+        border-width: 0.1em 0.6em 0 0;
+        top: 10%;
+        left: 1%;
+        border-radius: 50%;
+        width: 42vmin;
+        height: 42vmin;
+        animation: orbit 33s linear infinite;
+      }
+      .purple::before,
+      .blue::before,
+      .orange::before { 
+        cursor: pointer;
+        content: ''; 
+        position: absolute; 
+        width: 8vmin;
+        height: 8vmin;
+        border-radius: 50%;
+        box-shadow: 0 0 3em white;
+      }
+      .purple::before {
+        top: 72%;
+        left: 5%;
+        background-color: purple;
+      }
+      .blue::before {
+        top: 72%;
+        left: 80%;
+        background-color: blue;
+      }
+      .orange::before {
+        left: 42%;
+        top: 3%;
+        background-color: orange;
+      }
+      #image-track > .image {
+        width: 40vmin;
+        height: 56vmin;
+        object-fit: cover;
+        object-position: 100% 50%;
+      }
+      #image-track > .container2 {
+        width: 40vmin;
+        height: 56vmin;
+        object-fit: cover;
+        object-position: 100% 50%;
+        transform: translate(50%, 30%);
+      }
+      .sun {
+        position: absolute;
+        width: 8em;
+        height: 8em;
+        background-color: yellow;
+        border-radius: 50%;
+        box-shadow: 0 0 3em white;
+      }
+      .earth, .moon {
+        position: absolute;
+        border-style: solid;
+        border-color: white transparent transparent;
+        border-width: 0.1em 0.5em 0 0;
+        border-radius: 50%;
+      }
+      .earth {
+        width: 19em;
+        height: 19em;
+        left: -35%;
+        top: -26%;
+        animation: orbit 36.5s linear infinite;
+      }
+      .moon {
+        width: 5em;
+        height: 5em;
+        left: 72%;
+        animation: orbit 2.7s linear infinite;
+      }
+      .earth::before,
+      .moon::before { 
+        content: ''; 
+        position: absolute; 
+        border-radius: 50%;
+      }
+      .earth::before {
+        top: 1.5em; 
+        right: 1.7em;
+        width: 2.1em;
+        height: 2.1em;
+        background-color: aquamarine;
+      }
+      .moon::before {
+        top: 0.1em; 
+        right: 0em;
+        width: 1em;
+        height: 1em;
+        background-color: silver;
+      }
+      @keyframes orbit {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      #image-track {
+        display: flex;
+        gap: 4vmin;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-15%, -50%);
+      }
+      #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
