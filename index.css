@@ -1,9 +1,41 @@
+      @keyframes color {
+        0%   { background: #0f1115; }
+        20%  { background: #050d3a; }
+        40%  { background: #0c1b2d; }
+        60%  { background: #0c2c5b; }
+        80%  { background: #08192b; }
+        100% { background: #0f1115; }
+      }
       body {
+        background: #33CCCC; /* Fallback */
+        animation: color 9s infinite linear;
+        text-align: center;
+        padding: 2em;
+        overflow: hidden;
+      }
+      /* body {
         height: 100vh;
         width: 100vw;
         background-color: black;
         margin: 0rem;
         overflow: hidden;
+      } */
+      .my_info {
+        color: azure;
+      }
+      .text {
+        color: azure;
+      }
+      .profile-image {
+        max-width: 300px;
+        max-height: 100px;
+        border-radius: 50%;
+      }
+      .description {
+          margin-top: 20px;
+      }
+      .hidden {
+          display: none;
       }
       .contact-me {
         background-color: rgb(72, 72, 72) ;
@@ -23,10 +55,7 @@
         
       }
       #image-track > .container1 {
-        width: 55vmin;
-        height: 55vmin;
-        object-fit: cover;
-        object-position: 100% 50%;
+        min-width: 550px;
       }
       .purple, .blue, .orange {
         position: absolute;
