@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="solar.css">
+  <link rel="stylesheet" type="text/css" href="obp_spin.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="home-button">
+        <img src="data/amogus.png" alt="Button Image" class="button-image">
+    </a>
+    <span class="name">Juan Diego Mendez</span>
+  </nav>
+  <div id="image-track" data-mouse-down-at="0" data-prev-percentage="-21" >
+    <span class="container2" style="width: 30vmin">
+      <div class="sun">
+      </div >
+      <div class="earth">
+        <div class="moon">
+        </div>
+      </div>
+    </span>
+    <div class=" my_info " style="width: 100vmin">
+      <h1>Projects</h1>
+      <p class="description">I exist, therefore I think</p>
+      <div id="additionalData" class="hidden">
+        <p>You get no bitches.</p>
+        <p>You can add more information here.</p>
+      </div>
+    </div>
+    <span>
+      <h1 class="text" >IDK</h1>
+      <img onClick="window.location='projects/p3.html'" class="image" src="data/404.jpg" onmouseover="hoverimage(this)"
+                                                                                      onmouseout="normal(this)"
+                                                                                      draggable="false"
+                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
+    </span>
+    <span>
+      <h1 class="text" >IDK</h1>
+      <img onClick="window.location='projects/p5.html'" class="image" src="data/404.jpg" onmouseover="hoverimage(this)"
+                                                                                      onmouseout="normal(this)"
+                                                                                      draggable="false"
+                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
+    </span>
+    <span>
+      <h1 class="text" >AR Game</h1>
+      <img onClick="window.location='projects/p2.html'" class="image" src="data/AR Unity game.jpg" onmouseover="hoverimage(this)" onmouseout="normal(this)"
+                                                                                      draggable="false"
+                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
+    </span>
+    <span>
+      <h1 class="text" >iOS App</h1>
+      <img onClick="window.location='projects/p6.html'" class="image" src="data/Task Manager.png" onmouseover="hoverimage(this)" onmouseout="normal(this)"
+                                                                                      draggable="false"
+                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
+    </span>
+    <span>
+      <h1 class="text" >Python Game</h1>
+      <img onClick="window.location='projects/p7.html'" class="image" src="data/Python Game_.jpg" onmouseover="hoverimage(this)" onmouseout="normal(this)"
+                                                                                      draggable="false"
+                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
+    </span>
+    <span>
+      <h1 class="text" >VR Avatar</h1>
+      <img onClick="window.location='projects/p4.html'" class="image" src="data/VRChat.png" onmouseover="hoverimage(this)" onmouseout="normal(this)"
+                                                                                      draggable="false"
+                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
+    </span>
+    <span>
+      <h1 class="text" >Electromagnet Art</h1>
+      <img onClick="window.location='projects/p8.html'" class="image" src="data/FerroFluid.jpg" onmouseover="hoverimage(this)" onmouseout="normal(this)"
+                                                                                      draggable="false"
+                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
+    </span>
+  </div>
+  <script>
+    // JavaScript to toggle the display of additional data
+    function hoverimage(img) {
+      img.style.boxShadow = "0 0 10em white";
+      img.style.width = "42vmin";
+      img.style.height = "55vmin";
+    }
+    function normal(img) {
+      img.style.boxShadow = "0 0 0 white";
+      img.style.width = "40vmin";
+      img.style.height = "54vmin";
+    }
+    function resume_h(img) {
+      img.style.boxShadow = "0 0 10em white";
+      img.style.height = "55vmin";
+    }
+    function resume_n(img) {
+      img.style.boxShadow = "0 0 0 white";
+      img.style.height = "54vmin";
+    }
+    const track = document.getElementById("image-track");
+    window.onmousedown = e => {
+      track.dataset.mouseDownAt = e.clientX;
+    };
+    window.onmouseup = e => {
+      track.dataset.mouseDownAt = "0";
+      track.dataset.prevPercentage = track.dataset.percentage;
+    };
+    window.onmousemove = e => {
+      e.preventDefault();
+      if (track.dataset.mouseDownAt === "0") return;
+      const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
+      const mouseMax = window.innerWidth / 3;
+      const percentage = (mouseDelta / mouseMax) * -100;
+      const nextPercentage = Math.max(Math.min(parseFloat(track.dataset.prevPercentage) + percentage, 0), -100);
+      track.dataset.percentage = nextPercentage;
+      track.animate({ transform: `translate(${nextPercentage}%, -50%)` }, { duration: 1200, fill: "forwards" });
+      console.log(`translate(${nextPercentage}%, -50%)`);
+      for (const image of track.getElementsByClassName("image")) {
+        image.animate({ objectPosition: `${100 + nextPercentage}% center` },
+          { duration: 1200, fill: "forwards" });
+      }
+      console.log(`${100 + nextPercentage}% center`);
+    };
+  </script>
+</body>
+</html>

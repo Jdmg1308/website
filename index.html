@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
+  <title>Your Personal Website</title>
 </head>
 <body>
+  <nav class="navbar">
+    <a href="index.html" class="home-button">
+        <img src="data/amogus.png" alt="Button Image" class="button-image">
+    </a>
+    <span class="name">Juan Diego Mendez</span>
+  </nav>
   <!-- <video autoplay muted loop id="myVideo">
-    <source src="data/backgrnd.mov" type="video/mp4">
+    <source src="data/sub.mp4" type="video/mp4">
   </video> -->
-  <button class="contact-me">
-    contact me
-  </button>
-  <div id="image-track" data-mouse-down-at="0" data-prev-percentage="-21">
-    <span class="container1">
+  <div class=" my_info ">
+    <h1 class="bold" >Hello there!</h1>
+    <h1>My name is Diego... Juan Diego</h1>
+    <img class="profile-image" src="data\sherk.png" alt="Your Name">
+    <p class="description" >I exist, therefore I think</p>
+    <!-- Button to toggle additional data -->
+    <button id="contact-me" class="contact-me">contact me</button>
+    <!-- Additional data (hidden by default) -->
+    <div id="additionalData" class="hidden">
+      <p>You get no bitches.</p>
+      <p>You can add more information here.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="-21">
+    <span class="container1" >
       <span class="triforce">
         <div class="purple">
         </div>
@@ -21,19 +41,6 @@
         </div>
       </span>
     </span>
-    <div class=" my_info ">
-      <h1>Juan Diego Méndez</h1>
-      <img class="profile-image" src="data\sherk.png" alt="Your Name">
-      <p class="description">I exist, therefore I think</p>
-      <!-- Button to toggle additional data -->
-      <button id="toggleButton">Show Additional Data</button>
-      <!-- Additional data (hidden by default) -->
-      <div id="additionalData" class="hidden">
-        <p>You get no bitches.</p>
-        <p>You can add more information here.</p>
-      </div>
-    </div>
-    
     <span>
       <h1 class="text" >Resume</h1>
       <a href="projects\Resume-technical(2023).pdf">
@@ -44,68 +51,25 @@
       </a>
     </span>
     <span>
-      <h1 class="text" >AR Game</h1>
-      <img onClick="window.location='projects/p2.html'" class="image" src="data/AR Unity game.jpg" onmouseover="hoverimage(this)" onmouseout="normal(this)"
-                                                                                      draggable="false"
-                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
-    </span>
-    <span>
-      <h1 class="text" >IDK</h1>
-      <img onClick="window.location='projects/p3.html'" class="image" src="data/404.jpg" onmouseover="hoverimage(this)"
+      <h1 class="text" >Projects</h1>
+      <img onClick="window.location='projects.html'" class="image" src="data/projects.jpg" onmouseover="hoverimage(this)"
                                                                                       onmouseout="normal(this)"
                                                                                       draggable="false"
                                                                                       style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
     </span>
-    <span>
-      <h1 class="text" >VR Avatar</h1>
-      <img onClick="window.location='projects/p4.html'" class="image" src="data/VRChat.png" onmouseover="hoverimage(this)" onmouseout="normal(this)"
-                                                                                      draggable="false"
-                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
-    </span>
-    <span>
-      <h1 class="text" >IDK</h1>
-      <img onClick="window.location='projects/p5.html'" class="image" src="data/404.jpg" onmouseover="hoverimage(this)"
-                                                                                      onmouseout="normal(this)"
-                                                                                      draggable="false"
-                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
-    </span>
-    <span>
-      <h1 class="text" >iOS App</h1>
-      <img onClick="window.location='projects/p6.html'" class="image" src="data/Task Manager.png" onmouseover="hoverimage(this)" onmouseout="normal(this)"
-                                                                                      draggable="false"
-                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
-    </span>
-    <span>
-      <h1 class="text" >Python Game</h1>
-      <img onClick="window.location='projects/p7.html'" class="image" src="data/Python Game_.jpg" onmouseover="hoverimage(this)" onmouseout="normal(this)"
-                                                                                      draggable="false"
-                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
-    </span>
-    <span>
-      <h1 class="text" >Electromagnet Art</h1>
-      <img onClick="window.location='projects/p8.html'" class="image" src="data/FerroFluid.jpg" onmouseover="hoverimage(this)" onmouseout="normal(this)"
-                                                                                      draggable="false"
-                                                                                      style="width: 40vmin;height:54vmin; object-fit: cover; object-position: 100% 50%;">
-    </span>
-    <div class="container2">
-      <div class="sun">
-      </div>
-      <div class="earth">
-        <div class="moon">
-        </div>
-      </div>
-    </div>
+  </div>
+
   </div>
   <script>
     // JavaScript to toggle the display of additional data
-    document.getElementById('toggleButton').addEventListener('click', function() {
+    document.getElementById('contact-me').addEventListener('click', function() {
         var additionalData = document.getElementById('additionalData');
         if (additionalData.style.display === 'none' || additionalData.style.display === '') {
             additionalData.style.display = 'block';
-            this.textContent = 'Hide Additional Data';
+            // this.textContent = 'Hide Additional Data';
         } else {
             additionalData.style.display = 'none';
-            this.textContent = 'Show Additional Data';
+            // this.textContent = 'Show Additional Data';
         }
     }); 
     function hoverimage(img) {
@@ -150,6 +114,20 @@
       }
       console.log(`${100 + nextPercentage}% center`);
     };
+
+    const navLinks = document.querySelector('.nav-links');
+    const navToggle = document.createElement('div');
+    navToggle.className = 'nav-links-toggle';
+    navToggle.innerHTML = '&#9776;'; // Unicode for the hamburger icon
+
+    // Append the toggle button to the navbar
+    document.querySelector('.navbar').appendChild(navToggle);
+
+    // Add an event listener to show/hide the navigation links
+    navToggle.addEventListener('click', () => {
+        navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
+    });
+
   </script>
 </body>
 </html>

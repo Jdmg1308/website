@@ -1,179 +1,160 @@
-      @keyframes color {
-        0%   { background: #0f1115; }
-        20%  { background: #050d3a; }
-        40%  { background: #0c1b2d; }
-        60%  { background: #0c2c5b; }
-        80%  { background: #08192b; }
-        100% { background: #0f1115; }
-      }
-      body {
-        background: #33CCCC; /* Fallback */
-        animation: color 9s infinite linear;
-        text-align: center;
-        padding: 2em;
-        overflow: hidden;
-      }
-      /* body {
-        height: 100vh;
-        width: 100vw;
-        background-color: black;
-        margin: 0rem;
-        overflow: hidden;
-      } */
-      .my_info {
-        color: azure;
-      }
-      .text {
-        color: azure;
-      }
-      .profile-image {
-        max-width: 300px;
-        max-height: 100px;
-        border-radius: 50%;
-      }
-      .description {
-          margin-top: 20px;
-      }
-      .hidden {
-          display: none;
-      }
-      .contact-me {
-        background-color: rgb(72, 72, 72) ;
-        color: white;
-        border: white;
-        height: 5vmin;
-        width: 13vmin;
-        border-radius: 13vmin;
-        cursor: pointer;
-        position: absolute;
-        top: 85%;
-        left: 45%;
-      }
-      .contact-me:hover {
-        background-color: silver;
-        color: black;
-        
-      }
-      #image-track > .container1 {
-        min-width: 550px;
-      }
-      .purple, .blue, .orange {
-        position: absolute;
-        border-style: solid;
-        color: transparent;
-        border-color: transparent;
-        border-width: 0.1em 0.6em 0 0;
-        top: 10%;
-        left: 1%;
-        border-radius: 50%;
-        width: 42vmin;
-        height: 42vmin;
-        animation: orbit 33s linear infinite;
-      }
-      .purple::before,
-      .blue::before,
-      .orange::before { 
-        cursor: pointer;
-        content: ''; 
-        position: absolute; 
-        width: 8vmin;
-        height: 8vmin;
-        border-radius: 50%;
-        box-shadow: 0 0 3em white;
-      }
-      .purple::before {
-        top: 72%;
-        left: 5%;
-        background-color: purple;
-      }
-      .blue::before {
-        top: 72%;
-        left: 80%;
-        background-color: blue;
-      }
-      .orange::before {
-        left: 42%;
-        top: 3%;
-        background-color: orange;
-      }
-      #image-track > .image {
-        width: 40vmin;
-        height: 56vmin;
-        object-fit: cover;
-        object-position: 100% 50%;
-      }
-      #image-track > .container2 {
-        width: 40vmin;
-        height: 56vmin;
-        object-fit: cover;
-        object-position: 100% 50%;
-        transform: translate(50%, 30%);
-      }
-      .sun {
-        position: absolute;
-        width: 8em;
-        height: 8em;
-        background-color: yellow;
-        border-radius: 50%;
-        box-shadow: 0 0 3em white;
-      }
-      .earth, .moon {
-        position: absolute;
-        border-style: solid;
-        border-color: white transparent transparent;
-        border-width: 0.1em 0.5em 0 0;
-        border-radius: 50%;
-      }
-      .earth {
-        width: 19em;
-        height: 19em;
-        left: -35%;
-        top: -26%;
-        animation: orbit 36.5s linear infinite;
-      }
-      .moon {
-        width: 5em;
-        height: 5em;
-        left: 72%;
-        animation: orbit 2.7s linear infinite;
-      }
-      .earth::before,
-      .moon::before { 
-        content: ''; 
-        position: absolute; 
-        border-radius: 50%;
-      }
-      .earth::before {
-        top: 1.5em; 
-        right: 1.7em;
-        width: 2.1em;
-        height: 2.1em;
-        background-color: aquamarine;
-      }
-      .moon::before {
-        top: 0.1em; 
-        right: 0em;
-        width: 1em;
-        height: 1em;
-        background-color: silver;
-      }
-      @keyframes orbit {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      #image-track {
-        display: flex;
-        gap: 4vmin;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-15%, -50%);
-      }
-      #myVideo {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-      }
+@keyframes color {
+  0%   { background: #0f1115; }
+  20%  { background: #050d3a; }
+  40%  { background: #0c1b2d; }
+  60%  { background: #0c2c5b; }
+  80%  { background: #08192b; }
+  100% { background: #0f1115; }
+}
+body {
+  background: #33CCCC; /* Fallback */
+  animation: color 9s infinite linear;
+  text-align: left;
+  padding: 1em;
+  overflow: hidden;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 100vh;
+  padding-left: 5em;
+  padding-left: 5em;
+}
+.row {
+  position: block;
+  
+  border: 2px solid rgb(255, 253, 253);
+  width: 1000px;
+  height: 1000px;
+  overflow: hidden; /* Just add this property */
+}
+.text {
+  color: azure;
+}
+.home-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.button-image {
+  width: 40px; /* Adjust the width to the size of your button image */
+  height: 40px; /* Adjust the height to the size of your button image */
+  margin-right: 10px; /* Adjust the spacing between the image and name */
+}
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff; /* Adjust the color as needed */
+}
+.my_info {
+  font-family: 'Arial';
+  font-weight:200;
+  font-size: 21px;
+  position: relative;
+  color: azure;
+  max-width: min-content;
+  min-width: 30%;
+  left: 10%;
+  top: 5.5%;
+}
+.bold {
+  font-weight: bold;
+  font-style: oblique;
+}
+.profile-image {
+  max-width: 300px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+.description {
+  margin-top: 20px;
+}
+.hidden {
+  display: none;
+}
+.contact-me {
+  background-color: rgb(72, 72, 72) ;
+  color: white;
+  border: white;
+  height: 5vmin;
+  width: 13vmin;
+  border-radius: 13vmin;
+  cursor: pointer;
+}
+.contact-me:hover {
+  background-color: silver;
+  color: black;
+  
+}
+#image-track > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  /* left: 50%; */
+  /* top: 50%; */
+  /* transform: translate(-15%, -50%); */
+}
+
+.nav-links-toggle {
+  display: none;
+}
+  /* Media Query for screens smaller than 600px (adjust as needed) */
+@media (max-width: 600px) {
+  body {
+    flex-direction: column; /* Stack elements vertically */
+  }
+  .button-container {
+    margin: 10px 0;
+  }
+  .button-image {
+    width: 30px; /* Adjust size for smaller screens */
+    height: 30px;
+    margin-right: 5px; /* Reduce spacing */
+  }
+  .name {
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+/* Style for the navbar */
+.navbar {
+  background-color: #333; /* Change to your desired background color */
+  padding: 5px;
+  border-radius: 1vmin;
+  color: white; /* Text color */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px; /* Set the desired height */
+  max-width: 210px; /* Set the desired height */
+
+}
+
+/* Style for the logo image */
+.button-image {
+  width: 40px; /* Adjust the width to the size of your button image */
+  height: 40px; /* Adjust the height to the size of your button image */
+  margin-right: 10px; /* Adjust the spacing between the image and name */
+}
+
+/* Style for the name */
+.name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Style for the navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+/* Style for navigation links in mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none; /* Hide navigation links in mobile view */
+  }
+}

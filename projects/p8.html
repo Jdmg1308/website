@@ -1,51 +1,66 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Juan Diego Méndez</title>
+<div id="some-box">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .profile-image {
-            max-width: 300px;
-            border-radius: 50%;
-        }
-        .description {
-            margin-top: 20px;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <h1>My Personal Profile</h1>
-    <img class="profile-image" src="your_image.jpg" alt="Your Name">
-    <p class="description">Your description goes here.</p>
-    
-    <!-- Button to toggle additional data -->
-    <button id="toggleButton">Show Additional Data</button>
-    
-    <!-- Additional data (hidden by default) -->
-    <div id="additionalData" class="hidden">
-        <p>This is some additional data.</p>
-        <p>You can add more information here.</p>
-    </div>
+        @keyframes color {
+        0%   { background: #0f1115; }
+        20%  { background: #050d3a; }
+        40%  { background: #0c1b2d; }
+        60%  { background: #0c2c5b; }
+        80%  { background: #08192b; }
+        100% { background: #0f1115; }
+      }
+      body {
+        background: #33CCCC; /* Fallback */
+        animation: color 9s infinite linear;
+        text-align: center;
+        padding: 2em;
+        /* overflow: hidden; */
+      }
 
-    <script>
-        // JavaScript to toggle the display of additional data
-        document.getElementById('toggleButton').addEventListener('click', function() {
-            var additionalData = document.getElementById('additionalData');
-            if (additionalData.style.display === 'none' || additionalData.style.display === '') {
-                additionalData.style.display = 'block';
-                this.textContent = 'Hide Additional Data';
-            } else {
-                additionalData.style.display = 'none';
-                this.textContent = 'Show Additional Data';
-            }
-        });
-    </script>
-</body>
-</html>
+        article.row {width:100%; max-width:800px; min-height: 210px; margin:0 auto;padding:45px 0;}
+        article.row div {width:49.4%;display:inline-block;position:relative;border:0px solid white;}
+
+        p {
+            color: white;
+        }
+
+        h1 {
+            color: white;
+        }
+        h3 {
+            color: white;
+        }
+
+        /*
+        If we had 3 boxes, we could draw them in order C, A, B by writing div:first-of-type{[...]group:2;} and div:nth-of-type(2) {[...]group:3;}, and so on.
+        */
+    </style>
+    <h1>My War Crimes</h1>
+  
+      <article class="row" id="idea-one">
+          <div><img src="http://placekitten.com/g/240/210"/></div>
+          <div>
+              <h3>Racism</h3>
+              <p>Developed a device that uses coordinated electromagnets to control a ferrofluid using and programming an Arduino.</p>
+          </div>
+      </article>
+  
+      <article class="row" id="idea-two">
+          <div>
+              <h3>Child labor</h3>
+              <p>I had this idea for a high school physics competition that I ended up winning. The amount of time this project took was less than two days, the difficult part was getting the materials.</a>
+          </div>
+          <div><img src="http://placekitten.com/g/310/200"/></div>
+      </article>
+  
+      <article class="row" id="idea-three">
+          <div><img src="http://placekitten.com/g/250/200"/></div>
+          <div>
+              <h3>Boobs</h3>
+              <p>The coding and soldering part is quite simple, as its just three electromagnets connected to a relay controlled by the Arduino.</a>
+          </div>
+      </article>
+
+      <article class="row" id="idea-four">
+        <div><img src="http://placekitten.com/g/250/200"/></div>  https://www.youtube.com/watch?v=bwKv3ZvDxf4
+    </article>
+  </div>
