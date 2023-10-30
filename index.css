@@ -10,20 +10,24 @@ body {
   background: #33CCCC; /* Fallback */
   animation: color 9s infinite linear;
   text-align: left;
-  padding: 1em;
+  padding: 3em;
   overflow: hidden;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  height: 100vh;
+  /* height: 100vh; */
   padding-left: 5em;
-  padding-left: 5em;
+} 
+
+.css-15e9nnj {
+  display: flex;
+  justify-content: center;
+  transform: translate(-5%, 100%);
+  font-size: 2em;
+  margin-top: var(--chakra-space-6);
+  margin-bottom: var(--chakra-space-6);
+  color: var(--chakra-colors-white);
 }
-.row {
-  position: block;
-  
-  border: 2px solid rgb(255, 253, 253);
-  width: 1000px;
-  height: 1000px;
-  overflow: hidden; /* Just add this property */
+.box {
+  display: flex;
 }
 .text {
   color: azure;
@@ -47,12 +51,7 @@ body {
   font-family: 'Arial';
   font-weight:200;
   font-size: 21px;
-  position: relative;
   color: azure;
-  max-width: min-content;
-  min-width: 30%;
-  left: 10%;
-  top: 5.5%;
 }
 .bold {
   font-weight: bold;
@@ -80,45 +79,35 @@ body {
 }
 .contact-me:hover {
   background-color: silver;
-  color: black;
-  
+  /* color: black; */
 }
-#image-track > .image {
-  width: 40vmin;
-  height: 56vmin;
-  object-fit: cover;
-  object-position: 100% 50%;
+.One {
+  padding: 1em;
+  width: 400px;
+  height: 500px;
+}
+.Two {
+  padding: 1em;
+  width: 400px;
+  height: 500px;
+}
+.Three {
+  padding: 1em;
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+}
+.spline {
+  width: 400px;
+  height: 450px; 
 }
 #image-track {
   display: flex;
-  gap: 4vmin;
-  position: absolute;
-  /* left: 50%; */
-  /* top: 50%; */
-  /* transform: translate(-15%, -50%); */
+  gap: 3vmin;
 }
-
 .nav-links-toggle {
   display: none;
 }
-  /* Media Query for screens smaller than 600px (adjust as needed) */
-@media (max-width: 600px) {
-  body {
-    flex-direction: column; /* Stack elements vertically */
-  }
-  .button-container {
-    margin: 10px 0;
-  }
-  .button-image {
-    width: 30px; /* Adjust size for smaller screens */
-    height: 30px;
-    margin-right: 5px; /* Reduce spacing */
-  }
-  .name {
-    font-size: 14px; /* Adjust font size */
-  }
-}
-
 /* Style for the navbar */
 .navbar {
   background-color: #333; /* Change to your desired background color */
@@ -152,9 +141,20 @@ body {
   display: flex;
 }
 
-/* Style for navigation links in mobile view */
-@media (max-width: 768px) {
-  .nav-links {
-      display: none; /* Hide navigation links in mobile view */
+/* @media (max-width: 768px) {
+
+  #image-track {
+    flex-direction: column;
   }
+
+  .image {
+    max-width: 100%;
+  }
+
+} */
+
+.image {
+  width: 29vmin;
+  height: 29vmin;
+  border-radius: 10%;
 }
