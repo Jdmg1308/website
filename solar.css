@@ -1,14 +1,15 @@
-  #image-track > .container2 {
+  .container2 {
     width: 40vmin;
-    height: 56vmin;
+    height: 40vmin;
     object-fit: cover;
-    object-position: 100% 50%;
-    transform: translate(50%, 50%);
+    padding-left: 10%;
   }
   .sun {
-    position: absolute;
+    position: relative;
     width: 8em;
     height: 8em;
+    left: 68%;
+    top: 73%;
     background-color: yellow;
     border-radius: 50%;
     box-shadow: 0 0 3em white;
@@ -23,8 +24,6 @@
   .earth {
     width: 19em;
     height: 19em;
-    left: -13%;
-    top: -21%;
     animation: orbit 36.5s linear infinite;
   }
   .moon {

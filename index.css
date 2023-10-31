@@ -17,10 +17,15 @@ body {
   padding-left: 5em;
 } 
 
+.row {
+  padding-top: 2%;
+}
+
 .css-15e9nnj {
+  float: bottom;
   display: flex;
   justify-content: center;
-  transform: translate(-5%, 100%);
+  transform: translate(-3%, 100%);
   font-size: 2em;
   margin-top: var(--chakra-space-6);
   margin-bottom: var(--chakra-space-6);
@@ -30,6 +35,12 @@ body {
   display: flex;
 }
 .text {
+  /* user-drag: none; */
+  /* -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; */
   color: azure;
 }
 .home-button {
@@ -48,6 +59,7 @@ body {
   color: #ffffff; /* Adjust the color as needed */
 }
 .my_info {
+  width: 400px;
   font-family: 'Arial';
   font-weight:200;
   font-size: 21px;
@@ -58,9 +70,9 @@ body {
   font-style: oblique;
 }
 .profile-image {
+  border-radius: 3vmin;
   max-width: 300px;
-  max-height: 100px;
-  border-radius: 50%;
+  max-height: 300px;
 }
 .description {
   margin-top: 20px;
@@ -68,39 +80,28 @@ body {
 .hidden {
   display: none;
 }
-.contact-me {
-  background-color: rgb(72, 72, 72) ;
-  color: white;
-  border: white;
-  height: 5vmin;
-  width: 13vmin;
-  border-radius: 13vmin;
-  cursor: pointer;
-}
-.contact-me:hover {
-  background-color: silver;
-  /* color: black; */
-}
 .One {
   padding: 1em;
-  width: 400px;
+  width: 385px;
   height: 500px;
 }
 .Two {
   padding: 1em;
-  width: 400px;
+  width: 450px;
   height: 500px;
 }
 .Three {
   padding: 1em;
-  width: 400px;
+  width: 385px;
   height: 500px;
   overflow: hidden;
 }
+
 .spline {
   width: 400px;
-  height: 450px; 
+  height: 400px; 
 }
+
 #image-track {
   display: flex;
   gap: 3vmin;
@@ -153,6 +154,11 @@ body {
 
 } */
 
+@media (max-width: 500px) {
+  .One, .Two, .Three {
+    width: 100%;
+  }
+}
 .image {
   width: 29vmin;
   height: 29vmin;
