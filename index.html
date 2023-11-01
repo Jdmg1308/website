@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <title>Your Personal Website</title>
+  <link rel="icon" type="image/png" href="data/logo.PNG">
 </head>
 <body>
-  <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.487/build/spline-viewer.js"></script>
-  <spline-viewer url="https://prod.spline.design/yvQP5JuAEOvEqsUX/scene.splinecode"></spline-viewer> -->
   <nav class="navbar">
     <a href="index.html" class="home-button">
         <img src="data/logo.PNG" alt="Button Image" class="button-image">
@@ -31,7 +29,6 @@
         <h1 class="bold" >Hello there!</h1>
         <h1>My name is Diego... Juan Diego</h1>
         <img class="profile-image" src="data\me.jpg" alt="Your Name">
-        <!-- <p class="description" >I exist, therefore I think</p> -->
       </div>
     </div>
     <div class = "Two">
@@ -43,22 +40,20 @@
     </div>
     <div class="Three">
       <div id="image-track" data-mouse-down-at="0" data-prev-percentage="-21">
-        <div>
-          <h1 class="text" >About me</h1>
-          <a href="projects\Resume-technical(2023).pdf">
-            <img class="image" src="data/copy2resume.png" onmouseover="hoverimage(this)" onmouseout="normal(this)" draggable="false">
-          </a>
-        </div>
-        <div>
+        <span>
           <h1 class="text" >Projects</h1>
-          <img onClick="window.location='projects.html'" class="image" src="data/projects.jpg" onmouseover="hoverimage(this)" onmouseout="normal(this)" draggable="false">
-        </div>
-        <div>
+          <img onClick="window.location='projects.html'" class="image" src="data/coding_stock_1.jpg" onmouseover="hoverimage(this)" onmouseout="normal(this)" draggable="false">
+        </span>
+        <span>
           <h1 class="text" >Resume</h1>
           <a href="projects\Resume-technical(2023).pdf">
-            <img class="image" src="data/copy2resume.png" onmouseover="hoverimage(this)" onmouseout="normal(this)" draggable="false">
+            <img class="image" src="data/resume_stock.jpg" onmouseover="hoverimage(this)" onmouseout="normal(this)" draggable="false">
           </a>
-        </div>
+        </span>
+        <span>
+          <h1 class="text" >About me</h1>
+          <img onClick="window.location='about_me.html'" class="image" src="data/galaxy.jpg" onmouseover="hoverimage(this)" onmouseout="normal(this)" draggable="false">
+        </span>
       </div>
     </div>
   </div>  
@@ -70,8 +65,8 @@
           </path>
         </svg>
         </a>
-      </div>
-      <div class="css-iustw">
+    </div>
+    <div class="css-iustw">
         <a target="_blank" rel="noopener" class="chakra-link css-spn4bz" href="https://www.linkedin.com/in/juan-diego-mendez/">
           <svg style="color: white;" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12">
@@ -80,18 +75,18 @@
             </circle>
           </svg>
         </a>
-      </div>
-      <div class="css-iustw">
-        <a target="_blank" rel="noopener" class="chakra-link css-spn4bz" href="mailto:juandiegomendezgutierrez@gmail.com">
-          <svg style="color: white;" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-            </path>
-            <polyline points="22,6 12,13 2,6">
-            </polyline>
-          </svg>
-        </a>
-      </div>
     </div>
+    <div class="css-iustw">
+      <a target="_blank" rel="noopener" class="chakra-link css-spn4bz" href="mailto:juandiegomendezgutierrez@gmail.com">
+        <svg style="color: white;" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+            </path>
+          <polyline points="22,6 12,13 2,6">
+          </polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
   <script src="index.js"></script>
 </body>
 </html>

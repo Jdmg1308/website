@@ -37,6 +37,7 @@ let ChangedSize = "30vmin";
     track.animate({ transform: `translate(${nextPercentage}%, 0%)` }, { duration: 1300, fill: "forwards" });
     console.log(`translate(${nextPercentage}%, 0%)`);
     for (const image of track.getElementsByClassName("image")) {
+      console.log("Hello World");
       image.animate({ objectPosition: `${100 + nextPercentage}% center` },
         { duration: 1200, fill: "forwards" });
     }
