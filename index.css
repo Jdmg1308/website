@@ -142,6 +142,15 @@ body {
   body {
     overflow: visible;
   }
+  .image-track {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  
+    .block {
+      display: inline-block;
+    }
+  }
 }
 
 
